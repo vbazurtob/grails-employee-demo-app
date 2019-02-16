@@ -10,6 +10,9 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+                <li><g:link class="list" controller="employee" action="index">Employees</g:link></li>
+                <li><g:link class="list" controller="department" action="index">Departments</g:link></li>
+                
             </ul>
         </div>
         <div id="list-employee" class="content scaffold-list" role="main">
@@ -21,11 +24,15 @@
            
            <fieldset class="form">
 			    <g:form action="index" method="GET">
-			        <div class="fieldcontain">
-			            <label for="query">Search for employees:</label>
-			            <g:textField name="query" value="${params.query}"/>
-			        </div>
-			        <button type="submit" class="search">Search</button>
+			        <span class="fieldcontain row" >
+			            <label for="query" class="col-3" >Search for employees:</label>
+			            <g:textField class="col-4"  name="query" value="${params.query}"/>
+			            <span class="col-1">
+			            	<button type="submit" class="btn-search">Search</button>
+			            </span>
+			        	
+			        </span>
+			        
 			    </g:form>
 			</fieldset> 
            

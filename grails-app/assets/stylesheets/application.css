@@ -13,3 +13,33 @@
 *= require mobile
 *= require_self
 */
+
+
+.user-info{
+	background-color: white;
+	border-radius: 5px;
+	padding: 5px;
+	width: 30%;
+}
+.username-field{
+	font-weight: bold;
+	color: MediumSeaGreen;
+}
+
+.role-field{
+	font-weight: bold;
+	color: DodgerBlue;
+}
+
+.btn-logout{
+	background-color: DodgerBlue;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	border: 0px;
+}
+.btn-search{
+	border-radius: 5px;
+	font-weight: bold;
+	border: 0px;
+}
