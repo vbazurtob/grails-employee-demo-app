@@ -1,7 +1,5 @@
 
 package employeeapp
-//import employeeapp.Employee;
-//import employeeapp.Department;
 
 class BootStrap {
 

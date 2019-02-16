@@ -20,6 +20,7 @@ class EmployeeController {
         respond employeeService.get(id)
     }
 
+	@Secured(['ROLE_WRITE'])
     def create() {
         respond new Employee(params)
     }
@@ -47,6 +48,7 @@ class EmployeeController {
         }
     }
 
+	@Secured(['ROLE_WRITE'])
     def edit(Long id) {
         respond employeeService.get(id)
     }

@@ -25,7 +25,7 @@ class DepartmentController {
         respond departmentService.get(id)
     }
 
-
+	@Secured(['ROLE_WRITE'])
     def create() {
         respond new Department(params)
     }
@@ -54,7 +54,7 @@ class DepartmentController {
     }
 
 
-
+	@Secured(['ROLE_WRITE'])
     def edit(Long id) {
         respond departmentService.get(id)
     }

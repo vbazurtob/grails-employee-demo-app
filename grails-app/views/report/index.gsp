@@ -25,8 +25,8 @@
            <fieldset class="form">
 			    <g:form action="index" method="GET">
 			        <span class="fieldcontain row" >
-			            <label for="query" class="col-3" >Search for employees:</label>
-			            <g:textField class="col-4"  name="query" value="${params.query}"/>
+			            
+			            <g:textField class="col-4" placeholder="Search by employee name..."  name="query" value="${params.query}"/>
 			            <span class="col-1">
 			            	<button type="submit" class="btn-search">Search</button>
 			            </span>
