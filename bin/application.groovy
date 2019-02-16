@@ -20,14 +20,6 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	
 ]
 
-////import grails.plugins.springsecurity.SecurityConfigType;
-//grails.plugins.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
-grails.plugins.springsecurity.interceptUrlMap = [
-    '/department/*':         ['READ', 'WRITE'],
-    '/dbconsole/*':         ['ROLE_READ', 'ROLE_WRITE'],
-    '/employee/*':           ['ROLE_READ', 'ROLE_WRITE'],
-    '/**':                   ['IS_AUTHENTICATED_ANONYMOUSLY']
-]
 
 grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/assets/**',      filters: 'none'],
@@ -42,7 +34,7 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 ]
 
 //Comment for prod
-grails.plugin.springsecurity.logout.postOnly = false
+//grails.plugin.springsecurity.logout.postOnly = false
 
 
 

@@ -3,17 +3,13 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'employee.label', default: 'Employee')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Report page</title>
     </head>
     <body>
         <a href="#list-employee" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                
-                <sec:ifAnyGranted roles='ROLE_WRITE'>
-                	<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-				</sec:ifAnyGranted>
             </ul>
         </div>
         <div id="list-employee" class="content scaffold-list" role="main">
