@@ -11,7 +11,10 @@
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                
+                <sec:ifAnyGranted roles='ROLE_WRITE'>
+                	<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+            	</sec:ifAnyGranted>
             </ul>
         </div>
         <div id="edit-employee" class="content scaffold-edit" role="main">
@@ -32,7 +35,10 @@
                     <f:all bean="employee"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                
+                	<sec:ifAnyGranted roles='ROLE_WRITE'>
+                    	<input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                	</sec:ifAnyGranted>
                 </fieldset>
             </g:form>
         </div>

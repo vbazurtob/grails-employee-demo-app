@@ -17,11 +17,24 @@
             </ul>
         </div>
         <div id="list-employee" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1>Report</h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${employeeList}" />
+           
+           
+           <fieldset class="form">
+			    <g:form action="index" method="GET">
+			        <div class="fieldcontain">
+			            <label for="query">Search for employees:</label>
+			            <g:textField name="query" value="${params.query}"/>
+			        </div>
+			        <button type="submit" class="search">Search</button>
+			    </g:form>
+			</fieldset> 
+           
+           
+            <f:table collection="${employeeList}" properties="['name', 'department']" />
 
             <div class="pagination">
                 <g:paginate total="${employeeCount ?: 0}" />

@@ -24,6 +24,7 @@ class EmployeeController {
         respond new Employee(params)
     }
 
+	@Secured(['ROLE_WRITE'])
     def save(Employee employee) {
         if (employee == null) {
             notFound()
@@ -50,6 +51,7 @@ class EmployeeController {
         respond employeeService.get(id)
     }
 
+	@Secured(['ROLE_WRITE'])
     def update(Employee employee) {
         if (employee == null) {
             notFound()
@@ -72,6 +74,7 @@ class EmployeeController {
         }
     }
 
+	@Secured(['ROLE_WRITE'])
     def delete(Long id) {
         if (id == null) {
             notFound()
